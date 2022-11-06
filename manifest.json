@@ -1,0 +1,27 @@
+{
+  "name": "Docs Chat Notification",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "Displays a notification when you receive a chat message while away on Google Docs",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/document/*"
+      ],
+      "js": [ "content.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts" : ["background.js"],
+    "persistent": false
+  },
+  "permissions" : ["notifications"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  }
+  
+}
+
